@@ -3,10 +3,10 @@
 class Learner_Entity_Course {
 
   public function __construct() {
-    add_action( 'init', array($this, 'registerPostType'), 0 );
+    add_action( 'init', array($this, 'register_post_type'), 0 );
   }
 
-  public function registerPostType() {
+  public function register_post_type() {
     if( post_type_exists('course') )
       return;
 
@@ -39,7 +39,7 @@ class Learner_Entity_Course {
         'hierarchical'        => false,
         'public'              => true,
         'show_ui'             => true,
-        'show_in_menu'        => true,
+        'show_in_menu'        => 'learner',
         'menu_position'       => 5,
         'show_in_admin_bar'   => true,
         'show_in_nav_menus'   => true,
