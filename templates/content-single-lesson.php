@@ -1,8 +1,8 @@
 <?php
 /**
- * The Template for displaying an single course item content
+ * The Template for displaying an single lesson item content
  *
- * Override this template by copying it to yourtheme/learner/content-single-course.php
+ * Override this template by copying it to yourtheme/learner/content-single-lesson.php
  */
 ?>
 
@@ -20,10 +20,5 @@
 
   <div class="entry-content">
     <?php the_content( ); ?>
-
-    <div class="course-lesson-list">
-      <?php learner_get_template( 'single-course/lessons.php' ); ?>
-    </div>
-
-  </div><!-- .entry-content -->
+  </div>
 </article><!-- #post -->

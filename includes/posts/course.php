@@ -40,7 +40,6 @@ class Learner_Course_Register {
         'public'              => true,
         'show_ui'             => true,
         'show_in_menu'        => 'learner',
-        'menu_position'       => 5,
         'show_in_admin_bar'   => true,
         'show_in_nav_menus'   => true,
         'can_export'          => true,
