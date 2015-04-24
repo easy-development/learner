@@ -1,6 +1,6 @@
 <?php
 
-class Learner_Entity_Course {
+class Learner_Course_Register {
 
   public function __construct() {
     add_action( 'init', array($this, 'register_post_type'), 0 );
@@ -58,3 +58,5 @@ class Learner_Entity_Course {
   }
 
 }
+
+return new Learner_Course_Register();
