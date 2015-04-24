@@ -21,15 +21,6 @@ if(!class_exists('Learner')) {
       return self::$_instance;
     }
 
-    /**
-     * @var Learner_Entity_Course
-     */
-    public $entityCourse;
-    /**
-     * @var Learner_Entity_Lesson
-     */
-    public $entityLesson;
-
     public function __construct() {
       $this->setup_constants();
       $this->includes();
@@ -47,11 +38,16 @@ if(!class_exists('Learner')) {
     }
 
     private function includes() {
+      require_once(LEARNER_PLUGIN_DIR . "/includes/posts/course.php");
+      require_once(LEARNER_PLUGIN_DIR . "/includes/posts/lesson.php");
+
       require_once(LEARNER_PLUGIN_DIR . "/includes/course.php");
       require_once(LEARNER_PLUGIN_DIR . "/includes/lesson.php");
 
       if( is_admin() ) {
         require_once(LEARNER_PLUGIN_DIR . "/includes/admin/menus.php");
+
+        require_once(LEARNER_PLUGIN_DIR . "/includes/admin/meta-boxes/lesson-course.php");
       }
     }
 
