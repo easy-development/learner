@@ -14,7 +14,7 @@ class Learner_Admin_Menus {
         'learner',
         null,
         null,
-        '55.5'
+        '56'
     );
   }
 
